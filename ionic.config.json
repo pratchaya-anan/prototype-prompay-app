@@ -1,0 +1,7 @@
+{
+  "name": "prompay app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
