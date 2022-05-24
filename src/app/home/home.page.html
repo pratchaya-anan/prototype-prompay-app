@@ -1,20 +1,42 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content mode="ios">
+    <ng-container>
+        <ion-list>
+            <form [formGroup]="fg" (ngSubmit)="onSave()">
+                <ion-item lines="full" color="tertiary">
+                    <ion-label position="stacked">ชื่อผู้ส่ง</ion-label>
+                    <ion-textarea type="text" formControlName="name"></ion-textarea>
+                </ion-item>
+                <!-- <ion-item lines="full" color="tertiary">
+                    <ion-label position="stacked">ชื่อผู้ส่ง
+                        <ion-text color="danger" *ngIf="isInvalid('name')">
+                            ข้อมูลไม่ถูกต้อง
+                        </ion-text>
+                    </ion-label>
+                    <ion-input type="text" type="tel" formControlName="phone"></ion-input>
+                </ion-item> -->
+                <ion-item lines="full" color="tertiary">
+                    <ion-label position="stacked">เบอร์โทรศัพท์
+                        <ion-text color="danger" *ngIf="isInvalid('phone')">
+                            ข้อมูลไม่ถูกต้อง
+                        </ion-text>
+                    </ion-label>
+                    <ion-input type="text" type="tel" formControlName="phone"></ion-input>
+                </ion-item>
+                <ion-item lines="full" color="tertiary">
+                    <ion-label position="stacked">จำนวนเงิน
+                        <ion-text color="danger" *ngIf="isInvalid('amount')">
+                            ข้อมูลไม่ถูกต้อง
+                        </ion-text>
+                    </ion-label>
+                    <ion-input formControlName="amount"></ion-input>
+                </ion-item>
+                <ion-item lines="full" color="tertiary">
+                    <ion-label position="stacked">หมายเหตุ</ion-label>
+                    <ion-textarea type="text" formControlName="remark"></ion-textarea>
+                </ion-item>
+                <ion-button color="danger" class="ion-no-margin" expand="full" type="submit">ถัดไป
+                </ion-button>
+            </form>
+        </ion-list>
+    </ng-container>
 </ion-content>

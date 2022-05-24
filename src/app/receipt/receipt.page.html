@@ -1,0 +1,71 @@
+<ion-content class="transaction" mode="ios">
+    <ng-container *ngIf="data"></ng-container>
+    <ion-card class="ion-padding-top" color="tertiary">
+        <ion-item class="ion-text-center" color="tertiary" lines="none">
+            <ion-grid class="ion-padding">
+                <ion-row class="ion-text-center ion-align-items-center">
+                    <ion-col size="6" class="ion-text-center">
+                        <div class="content-center">
+                            <img class="icon transaction-img" src="assets/imgs/defaultshop.png">
+                        </div>
+                        <ion-icon class="right-arrow" name="chevron-forward-sharp"></ion-icon>
+                    </ion-col>
+                    <ion-col size="6" class="ion-text-center">
+                        <div class="content-center">
+                            <img class="icon circle transaction-img" src="assets/imgs/defaultshop.png">
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <ng-container *ngIf="data">
+                    <ion-list>
+                        <ion-row class="ion-text-center ion-align-items-center">
+                            <ion-col size="6" class="ion-text-center ion-no-padding">
+                                <ion-label class="ion-text-nowrap">
+                                    <h3><b>ชื่อผู้จ่ายเงิน</b></h3>
+                                </ion-label>
+                            </ion-col>
+                            <ion-col size="6" class="ion-text-center ion-no-padding">
+                                <ion-label class="ion-text-nowrap">
+                                    <h3><b><ion-item lines="full" color="tertiary">
+                                        <ion-label position="stacked">เบอร์โทรศัพท์</ion-label>
+                                        <ion-input type="tel" [value]="data.phone" readonly></ion-input>
+                                    </ion-item></b></h3>
+                                </ion-label>
+                            </ion-col>
+                        </ion-row>
+                    </ion-list>
+                </ng-container>
+                <ion-row class="ion-text-center ion-align-items-center">
+                    <ion-col size="6" class="ion-text-center ion-no-padding">
+                        <ion-label class="ion-text-nowrap">
+                            <h3></h3>
+                        </ion-label>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-item>
+        <ion-item class="ion-text-center" color="tertiary" lines="full">
+            <ion-label color="danger">
+                <h2><b>35.00
+                        <small>THB</small></b>
+                </h2>
+            </ion-label>
+        </ion-item>
+
+        <ion-item color="tertiary" class="ion-padding-vertical" lines="none">
+            <ion-label>
+                <h2><b>รหัสอ้างอิง : A2rd3E</b></h2>
+                <ion-text color="medium">
+                    <h3>
+                        <ion-datetime readonly></ion-datetime>
+                    </h3>
+                </ion-text>
+            </ion-label>
+        </ion-item>
+    </ion-card>
+
+</ion-content>
+<ion-footer class="ion-no-border">
+    <ion-button color="danger" class="ion-no-margin" expand="full" type="submit" [routerLink]="['/home']">กลับไปหน้าหลัก
+    </ion-button>
+</ion-footer>
