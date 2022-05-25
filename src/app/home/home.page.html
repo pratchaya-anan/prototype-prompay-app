@@ -3,17 +3,10 @@
         <ion-list>
             <form [formGroup]="fg" (ngSubmit)="onSave()">
                 <ion-item lines="full" color="tertiary">
-                    <ion-label position="stacked">ชื่อผู้ส่ง</ion-label>
-                    <ion-textarea type="text" formControlName="name"></ion-textarea>
-                </ion-item>
-                <!-- <ion-item lines="full" color="tertiary">
                     <ion-label position="stacked">ชื่อผู้ส่ง
-                        <ion-text color="danger" *ngIf="isInvalid('name')">
-                            ข้อมูลไม่ถูกต้อง
-                        </ion-text>
                     </ion-label>
-                    <ion-input type="text" type="tel" formControlName="phone"></ion-input>
-                </ion-item> -->
+                    <ion-input type="text" formControlName="name"></ion-input>
+                </ion-item>
                 <ion-item lines="full" color="tertiary">
                     <ion-label position="stacked">เบอร์โทรศัพท์
                         <ion-text color="danger" *ngIf="isInvalid('phone')">
